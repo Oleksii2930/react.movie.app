@@ -11,6 +11,7 @@ const MoviesList = ({ movies }: Props) => {
                 <MoviesListCard
                     key={movie.id}
                     movie={movie}
+                    genres={genres}
                 />
             ))}
         </div>

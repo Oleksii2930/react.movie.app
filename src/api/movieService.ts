@@ -1,4 +1,4 @@
-import { axiosInstance } from "./axios";
+import {axiosInstance} from "./axios";
 
 export const movieService = {
     getMovies() {
@@ -7,5 +7,13 @@ export const movieService = {
 
     getGenres() {
         return axiosInstance.get("/genre/movie/list");
+    },
+
+    getMoviesByGenre(genreId: number) {
+        return axiosInstance.get("/discover/movie", {
+            params: {
+                with_genres: genreId,
+            },
+        });
     },
 };

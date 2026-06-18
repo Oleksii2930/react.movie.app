@@ -13,6 +13,9 @@ const MoviesListCard = ({ movie }: Props) => {
             <h3>{movie.title}</h3>
 
             <p>⭐ {movie.vote_average}</p>
+            <p>
+                {movieGenres.join(", ")}
+            </p>
         </div>
     );
 };
