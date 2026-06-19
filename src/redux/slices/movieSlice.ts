@@ -1,13 +1,24 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { IMovie } from "../../models";
 
-const initialState = {
+interface MovieState {
+    movies: IMovie[];
+}
+
+const initialState: MovieState = {
     movies: [],
 };
 
 const movieSlice = createSlice({
-    name: "movie",
+    name: "movieSlice",
     initialState,
-    reducers: {},
+    reducers: {
+        setMovies: (state, action: PayloadAction<IMovie[]>) => {
+            state.movies = action.payload;
+        },
+    },
 });
+
+export const { setMovies } = movieSlice.actions;
 
 export default movieSlice.reducer;

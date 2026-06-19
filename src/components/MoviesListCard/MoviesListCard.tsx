@@ -1,22 +1,41 @@
+import PosterPreview from "../PosterPreview";
+import { IGenre, IMovie } from "../../models";
+import MovieInfo from "../MovieInfo/MovieInfo";
+import UserInfo from "../UserInfo/UserInfo";
+import { Link } from "react-router-dom";
+
 interface Props {
-    movie: any;
+    movie: IMovie;
+    genres: IGenre[];
 }
 
-const MoviesListCard = ({ movie }: Props) => {
+const MoviesListCard = ({ movie, genres }: Props) => {
+
+    const movieGenres: string[] = movie.genre_ids
+        .map(id => genres.find(genre => genre.id === id)?.name)
+        .filter((name): name is string => Boolean(name));
+
     return (
+        <Link to={`/movie/${movie.id}`}
+              style={{
+                  textDecoration: "none",
+                  color: "inherit"
+              }}>
         <div>
-            <img
-                src={`https://image.tmdb.org/t/p/w300${movie.poster_path}`}
-                alt={movie.title}
+            <PosterPreview
+                posterPath={movie.poster_path}
+                title={movie.title}
             />
 
-            <h3>{movie.title}</h3>
 
-            <p>⭐ {movie.vote_average}</p>
-            <p>
-                {movieGenres.join(", ")}
-            </p>
+            <MovieInfo
+                title={movie.title}
+                rating={movie.vote_average}
+                genres={movieGenres}
+            />
+            <UserInfo username="Movie Fan" />
         </div>
+        </Link>
     );
 };
 

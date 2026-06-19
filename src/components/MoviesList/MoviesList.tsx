@@ -1,10 +1,12 @@
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
+import {IGenre, IMovie} from "../../models";
 
 interface Props {
-    movies: any[];
+    movies: IMovie[];
+    genres: IGenre[];
 }
 
-const MoviesList = ({ movies }: Props) => {
+const MoviesList = ({ movies, genres }: Props) => {
     return (
         <div>
             {movies.map(movie => (

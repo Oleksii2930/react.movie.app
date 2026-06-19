@@ -1,13 +1,19 @@
-import React from 'react';
-import './App.css';
-import MoviesPage from "./pages/MoviesPage";
+import { BrowserRouter } from "react-router-dom";
+import { useState } from "react";
+
+import AppRouter from "./routers/AppRoutes";
 
 function App() {
+
+    const [search, setSearch] = useState("");
+
     return (
-        <div className="App">
-            <h1>Movies App</h1>
-            <MoviesPage />
-        </div>
+        <BrowserRouter>
+            <AppRouter
+                search={search}
+                setSearch={setSearch}
+            />
+        </BrowserRouter>
     );
 }
 
