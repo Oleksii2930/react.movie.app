@@ -1,11 +1,91 @@
 .header {
-    height: 70px;
+    height: 90px;
+
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    justify-content: space-between;
 
-    background-color: #032541;
+    padding: 0 40px;
+
+    background: white;
+
+    border-bottom: 1px solid #ececec;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.searchContainer {
+    display: flex;
+    align-items: center;
+
+    width: 500px;
+
+    background: #f5f5f5;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.search {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 18px 24px;
+
+    font-size: 16px;
+}
+
+.searchBtn {
+    width: 60px;
+    height: 60px;
+
+    border: none;
+
+    background: #ea4c89;
+
     color: white;
 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.signUp {
+    border: none;
+    background: transparent;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.login {
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 999px;
+
+    background: #0f172a;
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
 }

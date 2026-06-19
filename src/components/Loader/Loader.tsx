@@ -1,5 +1,11 @@
+import "./Loader.css";
+
 const Loader = () => {
-    return <h2>Loading...</h2>;
+    return (
+        <div className="loader-wrapper">
+            <div className="loader"></div>
+        </div>
+    );
 };
 
 export default Loader;

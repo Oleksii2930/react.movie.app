@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import MoviesPage from "../pages/MoviesPage";
-import MovieDetailsPage from "../containers/MovieDetailsPage/MovieDetailsPage";
+import MoviesPage from "../containers/pages/MoviesPage";
+import MovieDetailsPage from "../containers/pages/MovieDetailsPage";
 import Layout from "../layouts/MainLayout";
 
 interface Props {

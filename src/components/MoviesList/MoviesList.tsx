@@ -1,5 +1,6 @@
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import {IGenre, IMovie} from "../../models";
+import { IGenre, IMovie } from "../../models";
+import "./MoviesList.css";
 
 interface Props {
     movies: IMovie[];
@@ -8,7 +9,7 @@ interface Props {
 
 const MoviesList = ({ movies, genres }: Props) => {
     return (
-        <div>
+        <div className="movies-grid">
             {movies.map(movie => (
                 <MoviesListCard
                     key={movie.id}

@@ -1,0 +1,22 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 14px;
+
+    border-radius: 999px;
+
+    background: #f3f4f6;
+
+    color: #374151;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.badge:hover {
+    background: #ea4c89;
+    color: white;
+}

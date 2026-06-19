@@ -1,0 +1,24 @@
+.ratingWrapper {
+    position: relative;
+
+    display: inline-block;
+
+    font-size: 24px;
+    line-height: 1;
+}
+
+.starsEmpty {
+    color: #d1d5db;
+}
+
+.starsFilled {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    color: #fbbf24;
+}
