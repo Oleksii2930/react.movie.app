@@ -22,19 +22,11 @@ const Header = ({ search, setSearch }: Props) => {
                     onChange={(e) => setSearch(e.target.value)}
                 />
 
-                <button className={css.searchBtn}>
-                    🔍
-                </button>
+
             </div>
 
             <div className={css.actions}>
-                <button className={css.signUp}>
-                    Sign up
-                </button>
 
-                <button className={css.login}>
-                    Log in
-                </button>
             </div>
 
         </header>

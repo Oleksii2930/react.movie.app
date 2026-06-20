@@ -1,0 +1,38 @@
+.genres-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin: 25px 0;
+}
+
+.genre-btn {
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.genre-btn:hover {
+    background: #ea4c89;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.active {
+    background: #ea4c89;
+    color: white;
+}

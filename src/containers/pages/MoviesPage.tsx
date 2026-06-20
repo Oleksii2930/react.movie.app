@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { movieService } from "../../api/movieService";
+
 import MoviesList from "../../components/MoviesList";
 import Pagination from "../../components/Pagination/Pagination";
 import Loader from "../../components/Loader/Loader";
+import GenresList from "../../components/GenresList/GenresList";
 
 import { useAppDispatch } from "../../redux/hooks/useAppDispatch";
 import { useAppSelector } from "../../redux/hooks/useAppSelector";
@@ -15,8 +17,10 @@ interface Props {
 }
 
 const MoviesPage = ({ search }: Props) => {
+
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
+    const [activeGenre, setActiveGenre] = useState<number | null>(null);
 
     const dispatch = useAppDispatch();
 
@@ -84,7 +88,11 @@ const MoviesPage = ({ search }: Props) => {
         try {
             setLoading(true);
 
-            const res = await movieService.getMoviesByGenre(genreId);
+            setActiveGenre(genreId);
+
+            const res = await movieService.getMoviesByGenre(
+                genreId
+            );
 
             dispatch(setMovies(res.data.results));
         } catch (e) {
@@ -96,18 +104,14 @@ const MoviesPage = ({ search }: Props) => {
 
     return (
         <div>
+
             <h2>Genres</h2>
 
-            <div>
-                {genres.map(genre => (
-                    <button
-                        key={genre.id}
-                        onClick={() => getMoviesByGenre(genre.id)}
-                    >
-                        {genre.name}
-                    </button>
-                ))}
-            </div>
+            <GenresList
+                genres={genres}
+                activeGenre={activeGenre}
+                onSelectGenre={getMoviesByGenre}
+            />
 
 
 

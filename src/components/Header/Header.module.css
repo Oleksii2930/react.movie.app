@@ -31,61 +31,8 @@
     overflow: hidden;
 }
 
-.search {
-    flex: 1;
-
-    border: none;
-    outline: none;
-
-    background: transparent;
-
-    padding: 18px 24px;
-
-    font-size: 16px;
-}
-
-.searchBtn {
-    width: 60px;
-    height: 60px;
-
-    border: none;
-
-    background: #ea4c89;
-
-    color: white;
-
-    font-size: 20px;
-
-    cursor: pointer;
-}
-
 .actions {
     display: flex;
     align-items: center;
     gap: 15px;
-}
-
-.signUp {
-    border: none;
-    background: transparent;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-}
-
-.login {
-    border: none;
-
-    padding: 15px 30px;
-
-    border-radius: 999px;
-
-    background: #0f172a;
-    color: white;
-
-    font-weight: 600;
-
-    cursor: pointer;
 }
