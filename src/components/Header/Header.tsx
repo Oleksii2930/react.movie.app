@@ -1,4 +1,4 @@
-import css from "./Header.module.css";
+import  "./Header.css";
 
 interface Props {
     search: string;
@@ -7,25 +7,23 @@ interface Props {
 
 const Header = ({ search, setSearch }: Props) => {
     return (
-        <header className={css.header}>
+        <header className="header">
 
-            <div className={css.logo}>
-                🎬 Movies
-            </div>
+            <h1 className="logo">
+                🎬 Movies App
+            </h1>
 
-            <div className={css.searchContainer}>
+            <div className="search-wrapper">
+
+
+
                 <input
-                    className={css.search}
                     type="text"
                     placeholder="Search movies..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
+                    className="search-input"
                 />
-
-
-            </div>
-
-            <div className={css.actions}>
 
             </div>
 

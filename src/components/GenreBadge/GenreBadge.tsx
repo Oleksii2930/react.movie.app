@@ -1,4 +1,4 @@
-import css from "./GenreBadge.module.css";
+import  "./GenreBadge.css";
 
 interface Props {
     name: string;
@@ -6,7 +6,7 @@ interface Props {
 
 const GenreBadge = ({ name }: Props) => {
     return (
-        <span className={css.badge}>
+        <span className="badge">
             {name}
         </span>
     );
