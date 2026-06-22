@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-import { movieService } from "../../api/movieService";
 
-import MoviesList from "../../components/MoviesList";
 import Pagination from "../../components/Pagination/Pagination";
 import Loader from "../../components/Loader/Loader";
 import GenresList from "../../components/GenresList/GenresList";
@@ -11,6 +9,8 @@ import { useAppSelector } from "../../redux/hooks/useAppSelector";
 
 import { setMovies } from "../../redux/slices/movieSlice";
 import { setGenres } from "../../redux/slices/genreSlice";
+import {movieService} from "../../api/movieService";
+import MoviesList from "../../components/MoviesList/MoviesList";
 
 interface Props {
     search: string;

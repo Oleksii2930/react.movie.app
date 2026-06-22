@@ -1,4 +1,4 @@
-import css from "./StarsRating.module.css";
+import "./StarsRating.css";
 
 interface Props {
     rating: number;
@@ -9,13 +9,13 @@ const StarsRating = ({ rating }: Props) => {
     const percentage = (rating / 10) * 100;
 
     return (
-        <div className={css.ratingWrapper}>
-            <div className={css.starsEmpty}>
+        <div className="ratingWrapper">
+            <div className="starsEmpty">
                 ★★★★★
             </div>
 
             <div
-                className={css.starsFilled}
+                className="starsFilled"
                 style={{ width: `${percentage}%` }}
             >
                 ★★★★★

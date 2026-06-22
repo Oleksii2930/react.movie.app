@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IGenre } from "../../models";
+import {IGenre} from "../../models/IGenre";
 
 interface GenreState {
     genres: IGenre[];

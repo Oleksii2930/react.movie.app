@@ -1,5 +1,5 @@
-import { IGenre } from "../../models";
 import "./GenresList.css"
+import {IGenre} from "../../models/IGenre";
 interface Props {
     genres: IGenre[];
     activeGenre: number | null;

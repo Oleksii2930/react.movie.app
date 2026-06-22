@@ -1,9 +1,9 @@
 import "./style.css";
-import PosterPreview from "../PosterPreview";
-import { IGenre, IMovie } from "../../models";
 import MovieInfo from "../MovieInfo/MovieInfo";
-import UserInfo from "../UserInfo/UserInfo";
 import { Link } from "react-router-dom";
+import PosterPreview from "../PosterPreview/PosterPreview";
+import {IGenre} from "../../models/IGenre";
+import {IMovie} from "../../models/IMovie";
 
 interface Props {
     movie: IMovie;
@@ -36,7 +36,7 @@ const MoviesListCard = ({ movie, genres }: Props) => {
                         genres={movieGenres}
                     />
 
-                    <UserInfo username="Movie Fan" />
+
                 </div>
             </div>
         </Link>

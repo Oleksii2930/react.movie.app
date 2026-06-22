@@ -1,6 +1,7 @@
 import MoviesListCard from "../MoviesListCard/MoviesListCard";
-import { IGenre, IMovie } from "../../models";
 import "./MoviesList.css";
+import {IMovie} from "../../models/IMovie";
+import {IGenre} from "../../models/IGenre";
 
 interface Props {
     movies: IMovie[];

@@ -1,5 +1,6 @@
-import StarsRating from "../StarsRating";
-import GenreBadge from "../GenreBadge";
+import StarsRating from "../StarsRating/StarsRating";
+import GenreBadge from "../GenreBadge/GenreBadge";
+
 
 interface Props {
     title: string;

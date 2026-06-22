@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { IMovieDetails } from "../../models/IMovieDetails";
-import { movieService } from "../../api";
 
-import StarsRating from "../../components/StarsRating";
 import "./MovieDetailsPage.css";
+import {movieService} from "../../api/movieService";
+import StarsRating from "../../components/StarsRating/StarsRating";
+import {IMovieDetails} from "../../models/IMovieDetails";
 
 const MovieDetailsPage = () => {
 
