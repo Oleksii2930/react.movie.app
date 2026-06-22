@@ -36,7 +36,7 @@ const MoviesListCard = ({ movie, genres }: Props) => {
                         genres={movieGenres}
                     />
 
-                    <UserInfo username="Movie Fan" />
+
                 </div>
             </div>
         </Link>

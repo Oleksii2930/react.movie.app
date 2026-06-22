@@ -13,28 +13,11 @@ const AppRouter = ({ search, setSearch }: Props) => {
     return (
         <Routes>
 
-            <Route
-                element={
-                    <Layout
-                        search={search}
-                        setSearch={setSearch}
-                    />
-                }
-            >
+            <Route element={<Layout search={search} setSearch={setSearch}/>}>
 
-                <Route
-                    path="/"
-                    element={
-                        <MoviesPage
-                            search={search}
-                        />
-                    }
-                />
+                <Route path="/" element={<MoviesPage search={search}/>}/>
 
-                <Route
-                    path="/movie/:id"
-                    element={<MovieDetailsPage />}
-                />
+                <Route path="/movie/:id" element={<MovieDetailsPage />}/>
 
             </Route>
 
