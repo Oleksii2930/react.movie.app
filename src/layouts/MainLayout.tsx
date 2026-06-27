@@ -14,6 +14,7 @@ const Layout = ({ search, setSearch }: Props) => {
                 setSearch={setSearch}
             />
 
+
             <main>
                 <Outlet />
             </main>
